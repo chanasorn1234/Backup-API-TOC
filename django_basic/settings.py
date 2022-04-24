@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-mz41y#g@!(6gngqxej=8!yxnrk%(^ru+#5+_iy7*^@^^swt&ne
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['https://whispering-taiga-59375.herokuapp.com/']
+ALLOWED_HOSTS = ['https://morning-lake-39484.herokuapp.com/']
 
 
 # Application definition
