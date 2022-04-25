@@ -192,9 +192,14 @@ def Getcompare(request):
         s1 = f1.read()
         data_compare = json.loads(s1)
 
-    return JsonResponse({'ebay':data_compare},safe=False,json_dumps_params={'ensure_ascii':False})
-    
+    return JsonResponse(data_compare,safe=False,json_dumps_params={'ensure_ascii':False})
 
+def Getrealtime(request):   
+    with open('blogs'+'\\'+'ITEM_REALTIME2.json',encoding='utf-8') as f1:
+        s1 = f1.read()
+        data_realtime = json.loads(s1)
+
+    return JsonResponse(data_realtime,safe=False,json_dumps_params={'ensure_ascii':False})
 
 
 
