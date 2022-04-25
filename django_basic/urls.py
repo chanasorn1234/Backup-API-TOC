@@ -20,5 +20,18 @@ from blogs import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('home/',views.hello),
-    path('test/',views.hellojson)
+    path('test/',views.hellojson),
+    path('smartphone/',views.Getsmartphone),
+    path('tablet/',views.Gettablet),
+    path('labtop/',views.Getlabtop),
+    path('audio/',views.Getaudio),
+    path('wearable/',views.Getwearable),
+    path('tvandvideo/',views.Gettv_audio),
+    path('appliance/',views.Getappliance),
+    path('drink/',views.Getdrink),
+    path('groceries/',views.Getgroceries),
+    path('menfashion/',views.Getmenfashion),
+    path('womenfashion/',views.Getwomenfashion),
+    path('sportbag/',views.Getsportbag),
+    path('fitness/',views.Getfitness)
 ]
