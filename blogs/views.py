@@ -187,7 +187,13 @@ def Getfitness(request):
 
     return JsonResponse({'ebay':data_ebay,'lazada':data_lazada,'weloveshop':data_weloveshop},safe=False,json_dumps_params={'ensure_ascii':False})
   
+def Getcompare(request):
+    with open('blogs'+'\\'+'compare'+'\\'+'compare_smartphone2.json',encoding='utf-8') as f1:
+        s1 = f1.read()
+        data_compare = json.loads(s1)
 
+    return JsonResponse({'ebay':data_compare},safe=False,json_dumps_params={'ensure_ascii':False})
+    
 
 
 

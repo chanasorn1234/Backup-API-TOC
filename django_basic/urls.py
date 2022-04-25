@@ -33,5 +33,6 @@ urlpatterns = [
     path('menfashion/',views.Getmenfashion),
     path('womenfashion/',views.Getwomenfashion),
     path('sportbag/',views.Getsportbag),
-    path('fitness/',views.Getfitness)
+    path('fitness/',views.Getfitness),
+    path('compare/',views.Getcompare)
 ]
