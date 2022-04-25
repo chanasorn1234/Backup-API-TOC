@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-mz41y#g@!(6gngqxej=8!yxnrk%(^ru+#5+_iy7*^@^^swt&ne'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['https://powerful-cliffs-67306.herokuapp.com/']
+ALLOWED_HOSTS = []
 
 
 # Application definition
