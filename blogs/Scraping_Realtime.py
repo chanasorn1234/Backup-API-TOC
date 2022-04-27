@@ -33,6 +33,8 @@ def Get_data_realtime(url):
     item = []
     price = []
     img =[]
+    get_txt_to_json = []
+    lit = []
     # with open("ITEM_REALTIME2.csv","w",newline="",encoding='utf-8') as f:
     with open("ITEM_REALTIME2.json","w",encoding='utf-8') as f  :
         for j in range(0,6):
@@ -40,21 +42,28 @@ def Get_data_realtime(url):
                 clean_name = re.sub(pattern,' ',find_name[j].a.get_text(strip=True))
                 clean_name = re.sub(pattern2,'100',clean_name)
                 # fw.writerow([clean_name,find_price[j].span.get_text(strip=True),find_img[j].img['src'],'มาแรง'])
-                item.append(clean_name)
-                price.append(find_price[j].span.get_text(strip=True))
-                img.append(find_img[j].img['src'])
+                # item.append(clean_name)
+                # price.append(find_price[j].span.get_text(strip=True))
+                # img.append(find_img[j].img['src'])
+                get_txt_to_json = {
+                                "item":clean_name,
+                                "price":find_price[j].span.get_text(strip=True),
+                                "img":find_img[j].img['src']
+                            }
+                lit.append(get_txt_to_json)   
+                # f.write(json.dumps(get_txt_to_json,indent=4,ensure_ascii=False))
             except:
                 pass
-        get_txt_to_json = {
-                                "item":item,
-                                "price":price,
-                                "img":img
-                            }     
-        f.write(json.dumps(get_txt_to_json,indent=4,ensure_ascii=False))
+        # get_txt_to_json = {
+        #                         "item":item,
+        #                         "price":price,
+        #                         "img":img
+        #                     }     
+        f.write(json.dumps(lit,indent=4,ensure_ascii=False))
 
 
-while(True):
-    Get_data_realtime('https://www.lazada.co.th/tag/%E0%B8%81%E0%B8%B3%E0%B8%A5%E0%B8%B1%E0%B8%87%E0%B8%A1%E0%B8%B2%E0%B9%81%E0%B8%A3%E0%B8%87/')
-    print('END')
-    time.sleep(5)
+# while(True):
+Get_data_realtime('https://www.lazada.co.th/tag/%E0%B8%81%E0%B8%B3%E0%B8%A5%E0%B8%B1%E0%B8%87%E0%B8%A1%E0%B8%B2%E0%B9%81%E0%B8%A3%E0%B8%87/')
+print('END')
+    # time.sleep(5)
 
